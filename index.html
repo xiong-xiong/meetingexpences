@@ -1,0 +1,64 @@
+<doctype <!DOCTYPE html>
+<html>
+<head>
+	<title>Kokouskululaskuri</title>
+<meta charset="UTF-8">	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="ylapalkki">
+	<div class="brand">
+		<h1>Kokouskululaskuri</h1>
+	</div>
+</div>
+<div class="wrap">
+<div class="tooltip">
+<p>Osallistujia</p><span class="tooltiptext">Anna osallistujien lkm niin laskuri alkaa laskemaan palkkakuluja Suomalaisen asiantuntijan keskiansiolla (sis.sivukulut 30%). </span>
+
+<form autocomplete="off">
+	<input type="number" name="osallistujat" id="henkiloita"></input>
+
+</form></div><center>
+<button onclick="nolla()" id="nollaa">Nollaa laskuri</button></center>
+Palkkakulut:
+<h2 id="kulu"></h2>
+
+</p>
+</div>
+</body>
+
+<footer>
+
+<p class="copy">Copyright 2016 Juha Stenroos</p>
+<script>
+     var aika = 0;
+     var kulut = 0;
+     var henkilot = 0;
+     window.setInterval(
+     function eurot() {
+         aika = aika + 1;
+         henkilot = document.getElementById("henkiloita").value;
+         kulut = aika * 0.01 * henkilot;
+         kulut = kulut.toFixed(2);
+
+         document.getElementById("kulu").innerHTML = kulut + " euro";
+
+     }, 1000);
+</script>	
+
+<script>
+function nolla() {
+location.reload();
+}
+</script>
+
+</footer>
+
+</html>

@@ -1,0 +1,132 @@
+@font-face{ 
+  font-family: 'kellofontti';
+  src: url('fonts/digital-7.ttf');
+}
+
+body {
+	font-family: 'kellofontti';
+	font-size: 5vw;
+	color:  #ff4d4d;
+	background:  #262626;
+
+}
+
+.wrap {
+	margin: 0 auto;
+	width: 70%;
+	text-align: center;
+}
+.brand {
+	margin: 0 auto;
+	width: 80%;
+}
+
+button {
+	display: block;
+	width: 20vw;
+	height: 5vw;
+	background: #ff4d4d;
+	color: white;
+	padding: 10px 20px;
+	font-size: 2.5vw;
+	margin-bottom: 2vh;
+	border: 0;
+}
+button:hover {
+	background:  #ff6666;
+}
+
+input {
+	height: 140px;
+	width: 20vw;
+	font-size: 100px;
+	border: 8px solid #ff4d4d;
+	color: #ff4d4d;
+	font-family: 'kellofontti';
+	text-align: center;
+}
+input:hover {
+	border: 10px solid  #ff6666;
+}
+
+form {
+	margin-bottom: 2vh;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+ -webkit-appearance: none;
+    background: #FFF
+}
+
+
+h1, h2, h3, h4 {
+	margin-top: 0;
+	margin-bottom: 7vh;
+}
+
+p {
+	margin: 0 !important;
+}
+
+.copy {
+	font-size: 2vw;
+	text-align: center;
+}
+
+.tooltip-container {
+	position: relative;
+    display: inline-block;
+}
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: relative;
+    top: -9vw;
+    z-index: 99;
+    font-size: 2vw;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+@media screen and (max-width: 784px){
+
+  input {
+  	width: 40vw;
+  	height: 100px;
+  	font-size: 70px;
+  }
+  button {
+  	width: 40vw;
+  	height: 9vw;
+  	font-size: 7vw;
+  }
+  h1 {
+  	margin-top: 30px;
+  }
+   .wrap {
+  	width: 100%;
+  }
+}
+@media screen and (max-width: 450px){
+
+  input {
+  	width: 90vw;
+  	height: 100px;
+  	font-size: 70px;
+  }
+    button {
+  	width: 90vw;
+  }
+
+
+}
